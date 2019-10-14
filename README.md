@@ -10,7 +10,7 @@ wrappers to facilitate the use of antd components with
 [`redux-form`](https://github.com/erikras/redux-form).
 ---
 
-## [Live Demo](http://sophilabs-forks.github.io/react-final-form-antd) :eyes:
+## [Live Demo](http://sophilabs-forks.github.io/react-final-form-antd/index.html) :eyes:
 
 
 ## Installation
