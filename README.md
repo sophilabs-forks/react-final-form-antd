@@ -1,5 +1,5 @@
-# redux-form-antd
-This is  bindings for redux form and redux form antd.
+# react-final-form-antd
+This is  bindings for react final form and antd.
 This library should be compatible for both redux-form and react-final-form.
 Stories for final form are welcome.
 
