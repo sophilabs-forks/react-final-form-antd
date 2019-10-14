@@ -46,7 +46,7 @@ const modes = ["default", "combobox", "multiple", "tags"];
 
 const commonProps = {
   name: "kek2",
-  warn: v => (v && v.length > 2 ? "" : "too short"),
+  name: "kek2",
   validate: v => (v ? "" : "Required")
 };
 
@@ -56,31 +56,35 @@ storiesOf("TextField", module)
   .addDecorator(Locale)
   .add("TextField", () => (
     <Form
-      render={() => (
-        <div style={{ width: 300 }}>
-          <Field
-            {...commonProps}
-            label={text("Label", "Your textfield label")}
-            placeholder={text("Placeholder", "placeholder")}
-            component={TextField}
-            type={text("type", "text")}
-            size={select("size", sizeOptions, "default")}
-            labelCol={object("labelCol", { span: 24, offset: 0 })}
-            wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
-            addonBefore={text("addonBefore", "")}
-            addonAfter={text("addonAfter", "")}
-            prefix={text("prefix", "")}
-            suffix={text("suffix", "")}
-            autosize={object("autosize", { minRows: 2, maxRows: 6 })}
-            colon={boolean("colon", true)}
-            required
-          />
-        </div>
+      onSubmit={() => {}}
+      render={({ handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <div style={{ width: 300 }}>
+            <Field
+              {...commonProps}
+              label={text("Label", "Your textfield label")}
+              placeholder={text("Placeholder", "placeholder")}
+              component={TextField}
+              type={text("type", "text")}
+              size={select("size", sizeOptions, "default")}
+              labelCol={object("labelCol", { span: 24, offset: 0 })}
+              wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
+              addonBefore={text("addonBefore", "")}
+              addonAfter={text("addonAfter", "")}
+              prefix={text("prefix", "")}
+              suffix={text("suffix", "")}
+              autosize={object("autosize", { minRows: 2, maxRows: 6 })}
+              colon={boolean("colon", true)}
+              required
+            />
+          </div>
+        </form>
       )}
     />
   ))
   .add("TextAreaField", () => (
     <Form
+      onSubmit={() => {}}
       render={() => (
         <div style={{ width: 300 }}>
           <Field
@@ -98,6 +102,7 @@ storiesOf("TextField", module)
   ))
   .add("Number Field", () => (
     <Form
+      onSubmit={() => {}}
       render={() => (
         <div style={{ width: 300 }}>
           <Field
@@ -114,6 +119,7 @@ storiesOf("TextField", module)
   ))
   .add("Slide Field", () => (
     <Form
+      onSubmit={() => {}}
       render={() => (
         <div style={{ height: 300, width: 300 }}>
           <Field
@@ -135,39 +141,46 @@ storiesOf("TextField", module)
   ))
   .add("Switch Field", () => (
     <Form
-      render={() => (
-        <div style={{ width: 300 }}>
-          <Field
-            name={"kek"}
-            label={text("Label", "label")}
-            component={SwitchField}
-            type={text("type", "text")}
-            checkedChildren={text("checkedChildren", "+")}
-            uncheckedChildren={text("uncheckedChildren", "??")}
-            labelCol={object("labelCol", { span: 24, offset: 0 })}
-            wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
-            size={select("size", sizeOptions, "default")}
-          />
-        </div>
+      onSubmit={() => {}}
+      render={({ handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <div style={{ width: 300 }}>
+            <Field
+              name={"kek"}
+              label={text("Label", "label")}
+              component={SwitchField}
+              type={text("type", "text")}
+              checkedChildren={text("checkedChildren", "+")}
+              uncheckedChildren={text("uncheckedChildren", "??")}
+              labelCol={object("labelCol", { span: 24, offset: 0 })}
+              wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
+              size={select("size", sizeOptions, "default")}
+              />
+          </div>
+        </form>
       )}
     />
   ))
   .add("Radio Field", () => (
     <Form
-      render={() => (
-        <div style={{ width: 300 }}>
-          <Field
-            name={"kek"}
-            label={text("Label", "label")}
-            component={RadioField}
-            options={object("options", options)}
-          />
-        </div>
+      onSubmit={() => {}}
+      render={({ handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
+          <div style={{ width: 300 }}>
+            <Field
+              name={"kek"}
+              label={text("Label", "label")}
+              component={RadioField}
+              options={object("options", options)}
+              />
+          </div>
+        </form>
       )}
     />
   ))
   .add("Select Field", () => (
     <Form
+      onSubmit={() => {}}
       render={() => (
         <div style={{ width: 300 }}>
           <Field
@@ -187,6 +200,7 @@ storiesOf("TextField", module)
   ))
   .add("Checkbox Group Field", () => (
     <Form
+      onSubmit={() => {}}
       render={() => (
         <div style={{ width: 300 }}>
           <Field
@@ -201,6 +215,7 @@ storiesOf("TextField", module)
   ))
   .add("Picker Field", () => (
     <Form
+      onSubmit={() => {}}
       render={() => (
         <div style={{ width: 300 }}>
           <Field
