@@ -1,13 +1,13 @@
 {
-  "name": "redux-form-antd",
-  "version": "3.2.1",
-  "description": "antd redux form bindings",
+  "name": "react-final-form-antd",
+  "version": "0.0.2",
+  "description": "antd react-final-form bindings",
   "main": "./lib/index.js",
   "jsnext:main": "./es/index.js",
-  "homepage": "https://zhdmitry.github.io/redux-form-antd",
+  "homepage": "https://sophilabs-forks.github.io/react-final-form-antd",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zhdmitry/redux-form-antd"
+    "url": "https://github.com/sophilabs-forks/react-final-form-antd"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
@@ -22,7 +22,7 @@
   "peerDependencies": {
     "antd": "^3.2.1",
     "react": "^16.8.6",
-    "redux-form": "^8.2.0"
+    "react-final-form": "^6.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -40,20 +40,20 @@
     "cross-env": "^5.0.0",
     "eslint": "3.19.0",
     "eslint-loader": "1.7.1",
+    "final-form": "^4.16.1",
     "gh-pages": "^2.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-redux": "^7.0.3",
-    "redux": "^4.0.1",
-    "redux-form": "^8.2.0",
+    "react-final-form": "^6.3.0",
     "yargs": "7.1.0"
   },
   "keywords": [
-    "redux-form",
+    "react-final-form",
     "antd",
     "bindings"
   ],
-  "author": "zherebko dmitry",
+  "author": "Sophilabs",
   "license": "MIT",
   "bugs": {}
 }
