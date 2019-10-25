@@ -7,7 +7,7 @@
   "homepage": "https://sophilabs-forks.github.io/react-final-form-antd",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sophilabs-forks/react-final-form-antd"
+    "url": "https://github.com/cdiaz-sophilabs/react-final-form-antd"
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
