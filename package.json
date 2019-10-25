@@ -24,7 +24,6 @@
     "react-final-form": "^6.3.0"
   },
   "devDependencies": {
-    "@ant-design/aliyun-theme": "^0.0.3",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",

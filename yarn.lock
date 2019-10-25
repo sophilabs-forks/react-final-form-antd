@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@ant-design/aliyun-theme@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@ant-design/aliyun-theme/-/aliyun-theme-0.0.3.tgz#b7435cef1b1165d1eab555f06c1dffa35b5a0b48"
-  integrity sha512-vapr9hijhAZmzeUl4uKWK6057cilJ5Ijnp/fuTbi4Hw8/FKUoqHoOhJYBiPGk9FX9hBo92MY0wmwVcHtvTgOkw==
-
 "@ant-design/colors@^3.1.0":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@ant-design/colors/-/colors-3.2.2.tgz#5ad43d619e911f3488ebac303d606e66a8423903"
