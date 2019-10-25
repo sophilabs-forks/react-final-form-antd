@@ -21,7 +21,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var switchMap = (0, _mapError.customMap)(function (mapProps, _ref) {
   var value = _ref.input.value;
-  return _objectSpread({}, mapProps, {});
+  return _objectSpread({}, mapProps, {
+    checked: /true/i.test(value)
+  });
 });
 
 var _default = (0, _BaseComponent["default"])(_switch["default"], switchMap);

@@ -31,6 +31,7 @@ import {
   MonthPickerField
 } from "../src/components/DatePicker";
 
+
 const sizeOptions = {
   large: "large",
   default: "default",
@@ -94,7 +95,7 @@ storiesOf("TextField", module)
             component={TextAreaField}
             labelCol={object("labelCol", { span: 24, offset: 0 })}
             wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
-            autosize={object("autosize", { minRows: 2, maxRows: 6 })}
+            autoSize={object("autosize", { minRows: 2, maxRows: 6 })}
           />
         </div>
       )}
@@ -104,7 +105,7 @@ storiesOf("TextField", module)
     <Form
       onSubmit={() => {}}
       render={() => (
-        <div style={{ width: 300 }}>
+        <div style={{ width: '100%' }}>
           <Field
             {...commonProps}
             component={NumberField}
@@ -140,9 +141,8 @@ storiesOf("TextField", module)
     />
   ))
   .add("Switch Field", () => (
-    <Form
-      onSubmit={() => {}}
-      render={({ handleSubmit }) => (
+    <Form onSubmit={() => {}}>
+      {({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <div style={{ width: 300 }}>
             <Field
@@ -151,15 +151,15 @@ storiesOf("TextField", module)
               component={SwitchField}
               type={text("type", "text")}
               checkedChildren={text("checkedChildren", "+")}
-              uncheckedChildren={text("uncheckedChildren", "??")}
+              unCheckedChildren={text("unCheckedChildren", "??")}
               labelCol={object("labelCol", { span: 24, offset: 0 })}
               wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
               size={select("size", sizeOptions, "default")}
-              />
+            />
           </div>
         </form>
       )}
-    />
+    </Form>
   ))
   .add("Radio Field", () => (
     <Form
@@ -184,6 +184,7 @@ storiesOf("TextField", module)
       render={() => (
         <div style={{ width: 300 }}>
           <Field
+            style={{ width: '100%' }}
             name={"kek"}
             label={text("Label", "label")}
             component={SelectField}
@@ -192,7 +193,7 @@ storiesOf("TextField", module)
             allowClear={boolean("allowClear", false)}
             notFoundContent={text("notFoundContent", "not found")}
             placeholder={text("placeholder", "nothing selected")}
-            tokenSeparators={text("tokenSeparators", ",")}
+            tokenSeparators={array("tokenSeparators", [','])}
           />
         </div>
       )}
