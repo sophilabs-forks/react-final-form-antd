@@ -77,10 +77,9 @@ the `username` element when your form mounts, you could do:
 
 ```js
 componentWillMount() {
-  this.refs.firstField
-    .getRenderedComponent()
-    .getRenderedComponent()
-    .focus()
+  this.refs.firstField    
+    .getRenderedComponent() 
+    .focus()                
 }
 ```
 

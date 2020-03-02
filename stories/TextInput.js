@@ -17,6 +17,7 @@ import Locale from "./Locale";
 
 import {
   TextField,
+  TextAreaField,
   NumberField,
   SliderField,
   SwitchField,
@@ -29,6 +30,7 @@ import {
   TimePickerField,
   MonthPickerField
 } from "../src/components/DatePicker";
+
 
 const sizeOptions = {
   large: "large",
@@ -61,7 +63,7 @@ storiesOf("TextField", module)
           <div style={{ width: 300 }}>
             <Field
               {...commonProps}
-              label={text("Label", "label")}
+              label={text("Label", "Your textfield label")}
               placeholder={text("Placeholder", "placeholder")}
               component={TextField}
               type={text("type", "text")}
@@ -72,10 +74,30 @@ storiesOf("TextField", module)
               addonAfter={text("addonAfter", "")}
               prefix={text("prefix", "")}
               suffix={text("suffix", "")}
+              autosize={object("autosize", { minRows: 2, maxRows: 6 })}
               colon={boolean("colon", true)}
+              required
             />
           </div>
         </form>
+      )}
+    />
+  ))
+  .add("TextAreaField", () => (
+    <Form
+      onSubmit={() => {}}
+      render={() => (
+        <div style={{ width: 300 }}>
+          <Field
+            {...commonProps}
+            label={text("Label", "Your textareafield label")}
+            placeholder={text("Placeholder", "placeholder")}
+            component={TextAreaField}
+            labelCol={object("labelCol", { span: 24, offset: 0 })}
+            wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
+            autoSize={object("autosize", { minRows: 2, maxRows: 6 })}
+          />
+        </div>
       )}
     />
   ))
@@ -83,7 +105,7 @@ storiesOf("TextField", module)
     <Form
       onSubmit={() => {}}
       render={() => (
-        <div style={{ width: 300 }}>
+        <div style={{ width: '100%' }}>
           <Field
             {...commonProps}
             component={NumberField}
@@ -119,18 +141,17 @@ storiesOf("TextField", module)
     />
   ))
   .add("Switch Field", () => (
-    <Form
-      onSubmit={() => {}}
-      render={({ handleSubmit }) => (
+    <Form onSubmit={() => {}}>
+      {({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <div style={{ width: 300 }}>
             <Field
-              name="kek"
+              name={"kek"}
               label={text("Label", "label")}
               component={SwitchField}
               type={text("type", "text")}
               checkedChildren={text("checkedChildren", "+")}
-              unCheckedChildren={text("uncheckedChildren", "??")}
+              unCheckedChildren={text("unCheckedChildren", "??")}
               labelCol={object("labelCol", { span: 24, offset: 0 })}
               wrapperCol={object("wrapperCol", { span: 24, offset: 0 })}
               size={select("size", sizeOptions, "default")}
@@ -138,7 +159,7 @@ storiesOf("TextField", module)
           </div>
         </form>
       )}
-    />
+    </Form>
   ))
   .add("Radio Field", () => (
     <Form
@@ -147,11 +168,11 @@ storiesOf("TextField", module)
         <form onSubmit={handleSubmit}>
           <div style={{ width: 300 }}>
             <Field
-              name="kek"
+              name={"kek"}
               label={text("Label", "label")}
               component={RadioField}
               options={object("options", options)}
-            />
+              />
           </div>
         </form>
       )}
@@ -163,14 +184,16 @@ storiesOf("TextField", module)
       render={() => (
         <div style={{ width: 300 }}>
           <Field
-            name="kek"
+            style={{ width: '100%' }}
+            name={"kek"}
             label={text("Label", "label")}
             component={SelectField}
             options={object("options", options)}
             mode={select("mode", modes)}
             allowClear={boolean("allowClear", false)}
             notFoundContent={text("notFoundContent", "not found")}
-            tokenSeparators={text("tokenSeparators", ",")}
+            placeholder={text("placeholder", "nothing selected")}
+            tokenSeparators={array("tokenSeparators", [','])}
           />
         </div>
       )}
@@ -182,7 +205,7 @@ storiesOf("TextField", module)
       render={() => (
         <div style={{ width: 300 }}>
           <Field
-            name="kek"
+            name={"kek"}
             label={text("Label", "label")}
             component={CheckboxGroupField}
             options={object("options", options)}
@@ -197,7 +220,7 @@ storiesOf("TextField", module)
       render={() => (
         <div style={{ width: 300 }}>
           <Field
-            name="kek"
+            name={"kek"}
             label={text("Label", "label")}
             locale={"en"}
             placeholder={text("placeholder", "pl")}
